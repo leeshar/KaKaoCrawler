@@ -5,9 +5,9 @@ url = "https://dapi.kakao.com/v2/local/search/category.json?"
 apikey = "6663b13431da132c67c66562c3465c30"
 query = "카페"
 number = 1
-x = 124.1
-y = 33.1
-while(x < 131.7):
+x = 33.1
+y = 124.1
+while(x < 38.45):
     r = requests.get( url, params = {'category_group_code': 'CE7' ,'category_group_name':query, 'x': x, 'y': y}, headers={'Authorization' : 'KakaoAK ' + apikey } )
     js = simplejson.JSONEncoder().encode(r.json())
     r.json()
